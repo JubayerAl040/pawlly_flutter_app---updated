@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "431006957276",
+    "project_id": "pet-continent",
+    "storage_bucket": "pet-continent.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:431006957276:android:a6c349dfcd1981ae277e19",
+        "android_client_info": {
+          "package_name": "com.pet.continent.wormhole"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "431006957276-nd2cq7mbn97cdvg9hg3khjkujhsqqocl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBN3t4BAmxQPWxWcjpPaYfKDBYx9Qu4DBo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "431006957276-nd2cq7mbn97cdvg9hg3khjkujhsqqocl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
