@@ -22,17 +22,6 @@ class _BookTaxiScreenState extends State<BookTaxiScreen> {
   final _selectedTaxi = ValueNotifier<String>("");
   final _addFeautureFiled = TextEditingController();
   final _additionalInfo = TextEditingController();
-  // final _durationList = [
-  //   "15 min",
-  //   "20 min",
-  //   "25 min",
-  //   "30 min",
-  //   "35 min",
-  //   "40 min",
-  //   "45 min",
-  //   "50 min",
-  //   "55 min"
-  // ];
   final _seasonTypeList = [
     "Portrait Sessions",
     "Lifestyle Sessions",
@@ -54,7 +43,7 @@ class _BookTaxiScreenState extends State<BookTaxiScreen> {
           icon: const Icon(Icons.arrow_back_ios_new, color: Colors.white),
         ),
         title: const Text(
-          "Book Photograph",
+          "Book Taxi",
           style: TextStyle(color: Colors.white, fontSize: 17),
         ),
       ),
