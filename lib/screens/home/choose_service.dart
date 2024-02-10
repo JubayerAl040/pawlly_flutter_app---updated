@@ -2,6 +2,10 @@ import 'package:get/get.dart';
 import 'package:flutter/material.dart';
 import 'package:nb_utils/nb_utils.dart';
 import 'package:pawlly/main.dart';
+import 'package:pawlly/screens/booking_module/add_booking_forms/screens/book_lawyer_screen.dart';
+import 'package:pawlly/screens/booking_module/add_booking_forms/screens/book_pet_travel_screen.dart';
+import 'package:pawlly/screens/booking_module/add_booking_forms/screens/book_photograph_screen.dart';
+import 'package:pawlly/screens/booking_module/add_booking_forms/screens/book_taxi_screen.dart';
 
 import '../../components/app_scaffold.dart';
 import 'home_controller.dart';
@@ -16,24 +20,29 @@ class ChooseService extends StatelessWidget {
   Widget build(BuildContext context) {
     final List<Map> dummyData = [
       {
-        'name' : 'Taxi',
-        'description' : 'Reliable pet taxi: safe transport for your pet!',
-        'img' : 'https://i.ibb.co/4Z9wzkK/9152d010-2a62-4fa7-bd74-d1ab398e07ed-1-removebg-preview.png',
+        'name': 'Taxi',
+        'description': 'Reliable pet taxi: safe transport for your pet!',
+        'img':
+            'https://i.ibb.co/4Z9wzkK/9152d010-2a62-4fa7-bd74-d1ab398e07ed-1-removebg-preview.png',
       },
       {
-        'name' : 'Photography',
-        'description' : "Capture your pet's charm beautifully!",
-        'img' : 'https://i.ibb.co/NFvKf4Q/412365774-386374887177449-7875267707700283037-n-removebg-preview.png',
+        'name': 'Photography',
+        'description': "Capture your pet's charm beautifully!",
+        'img':
+            'https://i.ibb.co/NFvKf4Q/412365774-386374887177449-7875267707700283037-n-removebg-preview.png',
       },
       {
-        'name' : 'Travel',
-        'description' : "Tailored pet travel experiences, ensuring joy on the go!",
-        'img' : 'https://i.ibb.co/L5k5kR4/412085986-755892376567662-6533268400057984425-n-removebg-preview.png',
+        'name': 'Travel',
+        'description':
+            "Tailored pet travel experiences, ensuring joy on the go!",
+        'img':
+            'https://i.ibb.co/L5k5kR4/412085986-755892376567662-6533268400057984425-n-removebg-preview.png',
       },
       {
-        'name' : 'Lawyer',
-        'description' : "Protecting pet rights: legal advocacy for you.",
-        'img' : 'https://i.ibb.co/NmZmxKF/412265801-1097167598107253-6882099999172725069-n-removebg-preview.png',
+        'name': 'Lawyer',
+        'description': "Protecting pet rights: legal advocacy for you.",
+        'img':
+            'https://i.ibb.co/NmZmxKF/412265801-1097167598107253-6882099999172725069-n-removebg-preview.png',
       },
     ];
     return AppScaffold(
@@ -49,6 +58,7 @@ class ChooseService extends StatelessWidget {
         padding: const EdgeInsets.only(bottom: 50),
         child: Column(
           children: [
+            // services come from
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -57,12 +67,15 @@ class ChooseService extends StatelessWidget {
                   runSpacing: 16,
                   spacing: 16,
                   children: List.generate(
-                    dashboardController.dashboardData.value.systemService.length,
+                    dashboardController
+                        .dashboardData.value.systemService.length,
                     (index) {
-                      SystemService service = dashboardController.dashboardData.value.systemService[index];
+                      SystemService service = dashboardController
+                          .dashboardData.value.systemService[index];
                       return GestureDetector(
                         onTap: () {
-                          navigateToService(dashboardController.dashboardData.value.systemService[index]);
+                          navigateToService(dashboardController
+                              .dashboardData.value.systemService[index]);
                         },
                         child: ServiceCard(
                           service: service,
@@ -85,17 +98,24 @@ class ChooseService extends StatelessWidget {
                   spacing: 16,
                   children: List.generate(
                     4,
-                        (index) {
+                    (index) {
                       return GestureDetector(
                         onTap: () {
-
+                          if (index == 0) {
+                            Get.to((_) => const BookTaxiScreen());
+                          } else if (index == 1) {
+                            Get.to((_) => const BookPhotographScreen());
+                          } else if (index == 2) {
+                            Get.to((_) => const BookPetTravelScreen());
+                          } else {
+                            Get.to((_) => const BookLawyerScreen());
+                          }
                         },
                         child: ServiceCard(
                           dummy: dummyData[index]['name'],
                           service: SystemService(
-                            description: dummyData[index]['description'],
-                            serviceImage: dummyData[index]['img']
-                          ),
+                              description: dummyData[index]['description'],
+                              serviceImage: dummyData[index]['img']),
                           width: Get.width / 2 - 24,
                           height: Get.width / 2 - 16,
                           showSubTexts: true,
