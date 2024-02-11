@@ -9,7 +9,8 @@ import 'package:pawlly/screens/booking_module/add_booking_forms/widgets/cm_submi
 
 class BookLawyerScreen extends StatefulWidget {
   static const routeName = "/book-lawyer-screen";
-  const BookLawyerScreen({super.key});
+  const BookLawyerScreen({super.key, required this.img});
+  final String img;
   @override
   State<BookLawyerScreen> createState() => _BookLawyerScreenState();
 }
@@ -46,7 +47,6 @@ class _BookLawyerScreenState extends State<BookLawyerScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFF0E1116),
       appBar: AppBar(
         backgroundColor: const Color(0xFF0E1116),
         leading: IconButton(
@@ -162,7 +162,7 @@ class _BookLawyerScreenState extends State<BookLawyerScreen> {
                 maxLines: 3,
               ),
               const SizedBox(height: 30),
-              CmSubmitButton(onSubmit: () {}),
+              CmSubmitButton(img: widget.img),
             ],
           ),
         ),

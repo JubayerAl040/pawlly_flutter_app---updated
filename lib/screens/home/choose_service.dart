@@ -102,13 +102,34 @@ class ChooseService extends StatelessWidget {
                       return GestureDetector(
                         onTap: () {
                           if (index == 0) {
-                            Get.to((_) => const BookTaxiScreen());
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (_) => BookTaxiScreen(
+                                    img: dummyData[index]["img"]),
+                              ),
+                            );
                           } else if (index == 1) {
-                            Get.to((_) => const BookPhotographScreen());
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (_) => BookPhotographScreen(
+                                      img: dummyData[index]["img"])),
+                            );
                           } else if (index == 2) {
-                            Get.to((_) => const BookPetTravelScreen());
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (_) => BookPetTravelScreen(
+                                      img: dummyData[index]["img"])),
+                            );
                           } else {
-                            Get.to((_) => const BookLawyerScreen());
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (_) => BookLawyerScreen(
+                                      img: dummyData[index]["img"])),
+                            );
                           }
                         },
                         child: ServiceCard(

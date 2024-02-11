@@ -165,6 +165,7 @@ class BoardingServicesScreen extends StatelessWidget {
               ),
             ),
           ).expand(),
+          // submit button
           Obx(
             () => AppButtonWithPricing(
               price: totalAmount.toStringAsFixed(2).toDouble(),

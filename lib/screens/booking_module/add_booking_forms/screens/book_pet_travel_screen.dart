@@ -9,7 +9,8 @@ import 'package:pawlly/screens/booking_module/add_booking_forms/widgets/cm_submi
 
 class BookPetTravelScreen extends StatefulWidget {
   static const routeName = "/book-pet-travel-screen";
-  const BookPetTravelScreen({super.key});
+  const BookPetTravelScreen({super.key, required this.img});
+  final String img;
   @override
   State<BookPetTravelScreen> createState() => _BookPetTravelScreenState();
 }
@@ -36,7 +37,6 @@ class _BookPetTravelScreenState extends State<BookPetTravelScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFF0E1116),
       appBar: AppBar(
         backgroundColor: const Color(0xFF0E1116),
         leading: IconButton(
@@ -121,7 +121,7 @@ class _BookPetTravelScreenState extends State<BookPetTravelScreen> {
                 maxLines: 3,
               ),
               const SizedBox(height: 30),
-              CmSubmitButton(onSubmit: () {}),
+              CmSubmitButton(img: widget.img),
             ],
           ),
         ),
