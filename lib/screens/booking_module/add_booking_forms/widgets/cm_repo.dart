@@ -4,6 +4,6 @@ class CmRepo {
   Text titleText(String title) => Text(
         title,
         style: const TextStyle(
-            fontSize: 15, fontWeight: FontWeight.bold, color: Colors.white),
+            fontSize: 13, fontWeight: FontWeight.bold, color: Colors.white),
       );
 }
