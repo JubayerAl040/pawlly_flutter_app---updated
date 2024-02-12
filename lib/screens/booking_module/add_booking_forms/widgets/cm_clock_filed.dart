@@ -23,11 +23,11 @@ class CmClockField extends StatelessWidget {
           controller: controller,
           readOnly: true,
           textInputAction: TextInputAction.done,
-          style: const TextStyle(fontSize: 15, color: Colors.white),
+          style: const TextStyle(fontSize: 14, color: Colors.white),
           decoration: InputDecoration(
             hintText: label,
             hintStyle: const TextStyle(fontSize: 13, color: Colors.grey),
-            suffixIcon: const Icon(CupertinoIcons.clock),
+            suffixIcon: const Icon(Icons.timer_outlined, color: Colors.grey),
             filled: true,
             fillColor: const Color.fromARGB(26, 99, 99, 99),
             enabledBorder: const OutlineInputBorder(

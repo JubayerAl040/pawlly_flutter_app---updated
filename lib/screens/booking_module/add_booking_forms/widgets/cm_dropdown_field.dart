@@ -1,3 +1,4 @@
+import 'package:nb_utils/nb_utils.dart';
 import 'package:pawlly/screens/booking_module/add_booking_forms/widgets/cm_repo.dart';
 import 'package:flutter/material.dart';
 
@@ -42,7 +43,7 @@ class CmDropDownField extends StatelessWidget {
                 .toList(),
             onChanged: (val) => selectedVal.value = val!,
             icon: const Icon(Icons.arrow_drop_down),
-            dropdownColor: Colors.white,
+            dropdownColor: context.cardColor,
             decoration: InputDecoration(
               hintText: label,
               hintStyle: const TextStyle(fontSize: 13, color: Colors.grey),

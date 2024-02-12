@@ -1,5 +1,4 @@
 import 'package:pawlly/screens/booking_module/add_booking_forms/widgets/cm_repo.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
@@ -28,10 +27,11 @@ class CmDateField extends StatelessWidget {
           controller: controller,
           readOnly: true,
           textInputAction: TextInputAction.done,
+          style: const TextStyle(fontSize: 14, color: Colors.white),
           decoration: InputDecoration(
             hintText: label,
             hintStyle: const TextStyle(fontSize: 13, color: Colors.grey),
-            suffixIcon: const Icon(CupertinoIcons.calendar),
+            suffixIcon: const Icon(Icons.calendar_month, color: Colors.grey),
             filled: true,
             fillColor: const Color.fromARGB(26, 99, 99, 99),
             enabledBorder: const OutlineInputBorder(

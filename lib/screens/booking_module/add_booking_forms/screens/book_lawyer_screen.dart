@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:nb_utils/nb_utils.dart';
+import 'package:pawlly/components/app_scaffold.dart';
+import 'package:pawlly/main.dart';
 import 'package:pawlly/screens/booking_module/add_booking_forms/widgets/cm_add_button.dart';
 import 'package:pawlly/screens/booking_module/add_booking_forms/widgets/cm_clock_filed.dart';
 import 'package:pawlly/screens/booking_module/add_booking_forms/widgets/cm_date_field.dart';
@@ -46,17 +49,11 @@ class _BookLawyerScreenState extends State<BookLawyerScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: const Color(0xFF0E1116),
-        leading: IconButton(
-          onPressed: () => Navigator.pop(context),
-          icon: const Icon(Icons.arrow_back_ios_new, color: Colors.white),
-        ),
-        title: const Text(
-          "Book Lawyer",
-          style: TextStyle(color: Colors.white, fontSize: 17),
-        ),
+    return AppScaffold(
+      hideAppBar: false,
+      appBarTitle: Text(
+        "${locale.value.book} Lawyer",
+        style: primaryTextStyle(size: 16, decoration: TextDecoration.none),
       ),
       body: Padding(
         padding: const EdgeInsets.all(20),
